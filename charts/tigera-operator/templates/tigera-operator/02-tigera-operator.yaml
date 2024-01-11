@@ -41,7 +41,7 @@ spec:
       containers:
         - name: tigera-operator
           image: {{ template "tigera-operator.image" .Values.tigeraOperator}}
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           command:
             - operator
           volumeMounts:
